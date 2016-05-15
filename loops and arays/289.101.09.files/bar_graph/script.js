@@ -1,6 +1,6 @@
 // generate the graph's bars using this data array
 
-data = [
+var data = [
   'green', 100,
   'yellow', 50,
   'orange', 10,
@@ -21,11 +21,7 @@ data = [
   'wheat', 12
 ]
 
-var green = 100;
-var yellow = 50;
-var orange = 0;
-var purple = 0;
-var brown = 0;
+
 
          console.log(data[1])
 
@@ -37,18 +33,50 @@ var brown = 0;
     document.getElementById('frame').appendChild(bar);  
     bar.style.top = '0px';                             
     bar.style.left = i*100+'px';
+    
+    /*
+    <div class="bar" style="height:400px; left:20px; background-color:green"></div>
+    <div class="bar" style="height:200px; left:60px; background-color:yellow"></div>
+    <div class="bar" style="height:40px; left:100px; background-color:orange"></div>
+    <div class="bar" style="height:300px; left:140px; background-color:purple"></div>
+    */
+    
+var green = 0;
+var yellow = 0;
+var orange = 0;
+var purple = 0;
 
-if (i >= 100) {
-                 bar.style.top = '100px'; 
-                 bar.style.left = green*100+'px';
+
+        if (i < data.length) {
+                 bar.style.height = '400px';
+                 bar.style.left = green*100+'20px';
+                 bar.style.backgroundColor = 'green';
                  green ++;
                  
             }
             
-    if (i >= 50) {
-                 piece.style.top = '200px'; 
-                 piece.style.left = yellow*100+'px';
+   else if (i < data.length) {
+        
+                 bar.style.height = '200px';
+                 bar.style.left = yellow*100+'60px';
+                 bar.style.backgroundColor = 'yellow';
                  yellow ++;
+                 
+            }
+            
+       else  if (i < data.length) {
+                bar.style.height = '40px'
+                 bar.style.top = '100px'; 
+                 bar.style.left = orange*100+'100px';
+                 bar.style.backgroundColor = 'orange'
+                 orange ++;
+                 
+            }
+            
+   else if (i < data.length) {
+                 bar.style.top = '200px'; 
+                 bar.style.left = purple*100+'140px';
+                 purple ++;
                  
             }
             
