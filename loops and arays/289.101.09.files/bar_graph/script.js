@@ -54,13 +54,7 @@ if (i >= 100) {
             
 }
 
-var data = [
-  {
-    x: ['green', 'orange', 'yellow'],
-    y: [20, 14, 23],
-    type: 'bar'
-  }
-];
+
 
 
 
