@@ -1,6 +1,6 @@
 // generate the graph's bars using this data array
 
-var data = [
+data = [
   'green', 100,
   'yellow', 50,
   'orange', 10,
@@ -21,8 +21,24 @@ var data = [
   'wheat', 12
 ]
 
+var left = 0
+var color = 0
 
 
+    for (var i = 0; i <=18 ; i++) {
+
+        var bar = document.createElement('div');           
+    bar.setAttribute('class', 'bar');                 
+    document.getElementById('frame').appendChild(bar);  
+    bar.style.height = '100px';
+    bar.style.backgroundColor = data[color];
+    bar.style.left = left +'px';
+    left += 40;
+    color += 2;
+    height += 2;
+    };
+
+/*
          console.log(data[1])
 
     for (var i = 0; i < data.length; i++) {
@@ -40,7 +56,7 @@ var data = [
     <div class="bar" style="height:40px; left:100px; background-color:orange"></div>
     <div class="bar" style="height:300px; left:140px; background-color:purple"></div>
     */
-    
+    /*
 var green = 0;
 var yellow = 0;
 var orange = 0;
